@@ -1,0 +1,104 @@
+---
+title: "Homework 7: Hypothesis Testing"
+subtitle: "STAT 343: Mathematical Statistics"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Problem 1
+
+Suppose that a random sample of eight observations $X_1,...,X_8$ is taken from a normal distribution for which the mean and variance ($\mu, \sigma^2$) are unknown and we wish to test the following hypotheses:
+
+- $H_0: \mu=0$
+- $H_A: \mu\neq 0$
+
+Suppose also that the sample data are such that $\sum_{i=1}^8 X_i=-11.2$ and $\sum_{i=1}^8X_i^2=43.7$. 
+
+### (a) If a symmetric t-test is performed at a level of significance of 0.10 so that each tail in the rejection region has probability 0.05, should the null be rejected?
+
+\vspace{5cm}
+
+### (b) Suppose now that a t-test is performed at a level of significance of 0.10 but it is NOT symmetric. Instead, the null hypothesis is rejected if either $T \leq c_1$ or $T \geq c_2$, where $P(T \leq c_1)=0.01$ and $P(T \geq c_2)=0.09$. Derive the p-value for this test in terms of the data. Should the null be rejected? 
+
+\newpage
+
+# Problem 2
+
+Suppose that nine observations are selected at random from a normal distribution with unknown mean and variance, $\mu$ and $\sigma^2$; $\boldsymbol{\theta}=(\mu,\sigma^2)$. For these nine observations, it is found that $\bar{x}=22$ and $\sum_{i=1}^9(x_i-\bar{x})^2=72$.
+
+### (a) Carry out a test of the following hypotheses based on the generalized likelihood ratio test at a significance level of $\alpha=0.05$:
+
+- $H_0: \boldsymbol{\theta} \in \Omega_0=\left\{(\mu,\sigma^2):\mu \leq 20, \sigma^2 > 0 \right\}$
+- $H_A: \boldsymbol{\theta} \in \Omega_0=\left\{(\mu,\sigma^2):\mu > 20, \sigma^2 > 0 \right\}$
+
+\vspace{5cm}
+
+### (b) Carry out a test of the following hypotheses at the level of significance $\alpha=0.05$ by using the two-sided t-test (this is what we derived Monday if you are not familiar):
+
+- $H_0: \boldsymbol{\theta} \in \Omega_0=\left\{(\mu,\sigma^2):\mu = 20, \sigma^2 > 0 \right\}$
+- $H_A: \boldsymbol{\theta} \in \Omega_0=\left\{(\mu,\sigma^2):\mu \neq 20, \sigma^2 > 0 \right\}$
+
+\vspace{5cm}
+
+### (c) What is the power for the test carried out in (b)?
+
+\vspace{5cm}
+
+### (d) The Neyman Pearson Lemma states that for simple hypotheses $H_0$ and $H_A$ and a test of size $\alpha$ that rejects the null whenever the likelihood ratio test statistic $W$ is less than $w$, any other test with size $\alpha$ or less is less powerful (has less power) than the test based on the likelihood ratio test. Modify the test in (a) such that the Neyman Pearson Lemma will be applicable. (There are many potential answers to this question.)
+
+\newpage
+
+# Problem 3
+
+Let $X_1,...,X_5\sim Normal(\theta, 5^2)$. We want to test the hypotheses:
+
+- $H_0: \theta=25$
+- $H_A: \theta=10$
+
+Suppose we observe a sample mean of $\bar{x}=20$ based on a sample of $n=5$ observations.
+
+### (a) Suppose the null hypothesis of the test is true. What is the distribution of the sample mean $\bar{X}$?
+
+\vspace{2cm}
+
+### (b) Find the p-value for the likelihood ratio test. You can use R.
+
+\vspace{2cm}
+
+### (c) Suppose that the alternative hypothesis is $H_A: \theta=0$ instead of $H_A: \theta=10$. Would the p-value for the test change? You don't need to actually calculate a p-value. Justify your answer in a few words.
+
+\vspace{2cm}
+
+### (d) How about if the alternative hypothesis was $H_A: \theta=20$. Would the p-value for the test change? You don't need to actually calculate the p-value. Justify your answer in a few words.
+
+
+\vspace{2cm}
+
+### (e) How about it the alternative hypothesis was $H_A: \theta=25.1$. Would the p-value for the test change? You don't need to actually calculate a p-value. Justify your answer in a few words. 
+
+<!-- Let $X_1,...,X_n$ be a random sample from a normal distribution with unknown mean $\mu$ and known variance $\sigma^2$. Consider testing the following hypotheses: -->
+
+<!-- - $H_0: \mu=\mu_0$ -->
+<!-- - $H_A: \mu\neq \mu_0$ -->
+
+
+<!-- ### (a) Find the form of the likelihood ratio test statistic for this test.  -->
+
+<!-- \vspace{5cm} -->
+
+<!-- ### (b) Show that the likelihood ratio test statistic can be simplified to a form that involves the sample mean, $\bar{X}$. -->
+
+<!-- \vspace{5cm} -->
+
+<!-- ### (c) Show that the rejection region for this test corresponds to $R=\left\{(x_1,...,x_n): \right\}$ -->
+
+
+
+<!-- ### (d) It can be shown that the $(1-\alpha)*100\%$ confidence interval for $\mu$ is  -->
+
+<!-- $$\left[\bar{X}-z_{\alpha/2}\left(\frac{\sigma}{\sqrt{n}}\right), \bar{X}+z_{\alpha/2}\left(\frac{\sigma}{\sqrt{n}}\right) \right]$$ -->
+
+<!-- Suppose that $\mu_0$ lies in the confidence interval above.  -->
